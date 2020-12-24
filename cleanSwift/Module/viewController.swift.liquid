@@ -1,0 +1,34 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_targets }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} Beeline. All rights reserved.
+//
+
+import Dependencies
+import MBFoundation
+import MBStrings
+import MBUIKit
+import RxCocoa
+import RxSwift
+import UIAppKit
+import UIKit
+
+final class {{ module_info.name }}ViewController: UIViewController, {{module_info.name}}ViewProtocol {
+
+  var interactor: {{module_info.name}}InteractorProtocol?
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    // TODO: make ui
+    interactor?.activate()
+  }
+}
+
+// MARK: - Constants
+
+extension {{ module_info.name }}ViewController {
+  private enum Constants: Namespace {
+  }
+}

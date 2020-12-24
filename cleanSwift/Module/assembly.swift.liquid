@@ -1,0 +1,32 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_targets }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import CleanArchitecture
+import Dependencies
+import UIKit
+
+public final class {{ module_info.name }}Assembly: {{ module_info.name }}AssemblyProtocol {
+  public init() {}
+
+  public func assembly() -> UIViewController {
+    let viewController = {{ module_info.name }}ViewController()
+    let presenter = {{ module_info.name }}Presenter()
+    let router = {{ module_info.name }}Router()
+    let interactor = {{ module_info.name }}Interactor()
+
+    viewController.interactor = interactor
+    interactor.presenter = presenter
+    interactor.router = router
+    presenter.view = viewController
+
+    router.interactor = interactor
+    router.presentable = viewController
+
+    return viewController
+  }
+}
