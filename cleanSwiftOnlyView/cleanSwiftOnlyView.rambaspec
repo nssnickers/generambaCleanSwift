@@ -1,0 +1,17 @@
+# Template information section
+name: "cleanSwiftOnlyView"
+author: "Margarita Sukhova"
+version: "0.1.0"
+
+# The declarations for code files
+
+code_files:
+
+#Protocols
+- {name: Protocols.swift,  path: Module/protocols.swift.liquid}
+
+# Assembly
+- {name: Assembly.swift, path: Module/assembly.swift.liquid}
+
+# ViewController
+- {name: ViewController.swift, path: Module/viewController.swift.liquid}
