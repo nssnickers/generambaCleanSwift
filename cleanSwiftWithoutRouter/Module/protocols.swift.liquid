@@ -1,0 +1,45 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_targets }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import CleanArchitecture
+import Dependencies
+import MBFoundation
+import UIKit
+
+protocol {{ module_info.name }}Assembly {
+  func assembly() -> UIViewController
+}
+
+protocol {{ module_info.name }}Interactor: Interactor {
+  var presenter: {{ module_info.name }}Presenter! { get }
+
+  // TODO: declare interactor methods here
+}
+
+protocol {{ module_info.name }}Presenter: Presenter {
+  var view: {{ module_info.name }}View! { get }
+
+  // TODO: declare presenter methods here
+}
+
+protocol {{ module_info.name }}View: View {
+  var interactor: {{ module_info.name }}Interactor! { get }
+
+  // TODO: declare view methods here
+}
+
+// MARK: - Namespace
+public enum {{ module_info.name }}: Namespace {
+  struct PresentableDataModel {
+
+  }
+
+  struct ViewableViewModel {
+
+  }
+}
