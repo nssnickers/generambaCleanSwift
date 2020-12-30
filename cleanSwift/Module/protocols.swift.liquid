@@ -23,15 +23,20 @@ protocol {{ module_info.name }}Router: Router {
 
 protocol {{ module_info.name }}Interactor: Interactor {
   var router: {{ module_info.name }}Router! { get }
+  var presenter: {{ module_info.name }}Presenter! { get }
 
   // TODO: declare interactor methods here
 }
 
 protocol {{ module_info.name }}Presenter: Presenter {
+  var view: {{ module_info.name }}View! { get }
+
   // TODO: declare presenter methods here
 }
 
 protocol {{ module_info.name }}View: View {
+  var interactor: {{ module_info.name }}Interactor! { get }
+
   // TODO: declare view methods here
 }
 
