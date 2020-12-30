@@ -10,14 +10,14 @@ import CleanArchitecture
 import Dependencies
 import UIKit
 
-public final class {{ module_info.name }}Assembly: {{ module_info.name }}AssemblyProtocol {
+public final class {{ module_info.name }}AssemblyImp: {{ module_info.name }}Assembly {
   public init() {}
 
   public func assembly() -> UIViewController {
-    let viewController = {{ module_info.name }}ViewController()
-    let presenter = {{ module_info.name }}Presenter()
-    let router = {{ module_info.name }}Router()
-    let interactor = {{ module_info.name }}Interactor()
+    let viewController = {{ module_info.name }}ViewImp()
+    let presenter = {{ module_info.name }}PresenterImp()
+    let router = {{ module_info.name }}RouterImp()
+    let interactor = {{ module_info.name }}InteractorImp()
 
     viewController.interactor = interactor
     interactor.presenter = presenter

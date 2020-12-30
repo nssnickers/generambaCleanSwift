@@ -10,9 +10,9 @@ import CleanArchitecture
 import MBModels
 import RIBs
 
-final class {{ module_info.name }}Router: {{ module_info.name }}RouterProtocol {
+final class {{ module_info.name }}RouterImp: {{ module_info.name }}Router {
 
-  var presentable: PresentableViewController!
-  var interactor: {{ module_info.name }}InteractorProtocol!
+  weak var presentable: PresentableViewController!
+  var interactor: {{ module_info.name }}Interactor!
 
 }

@@ -15,9 +15,9 @@ import RxSwift
 import UIAppKit
 import UIKit
 
-final class {{ module_info.name }}ViewController: UIViewController, {{module_info.name}}ViewProtocol {
+final class {{ module_info.name }}ViewImp: UIViewController, {{module_info.name}}View {
 
-  var interactor: {{module_info.name}}InteractorProtocol?
+  var interactor: {{module_info.name}}Interactor?
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -28,7 +28,7 @@ final class {{ module_info.name }}ViewController: UIViewController, {{module_inf
 
 // MARK: - Constants
 
-extension {{ module_info.name }}ViewController {
+extension {{ module_info.name }}ViewImp {
   private enum Constants: Namespace {
   }
 }

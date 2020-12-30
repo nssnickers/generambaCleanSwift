@@ -15,23 +15,23 @@ protocol {{ module_info.name }}AssemblyProtocol {
   func assembly() -> UIViewController
 }
 
-protocol {{ module_info.name }}RouterProtocol: Router {
+protocol {{ module_info.name }}Router: Router {
   var interactor: {{ module_info.name }}InteractorProtocol! { get }
 
   // TODO: declare router methods here
 }
 
-protocol {{ module_info.name }}InteractorProtocol: Interactor {
-  var router: {{ module_info.name }}RouterProtocol! { get }
+protocol {{ module_info.name }}Interactor: Interactor {
+  var router: {{ module_info.name }}Router! { get }
 
   // TODO: declare interactor methods here
 }
 
-protocol {{ module_info.name }}PresenterProtocol: Presenter {
+protocol {{ module_info.name }}Presenter: Presenter {
   // TODO: declare presenter methods here
 }
 
-protocol {{ module_info.name }}ViewProtocol: View {
+protocol {{ module_info.name }}View: View {
   // TODO: declare view methods here
 }
 
