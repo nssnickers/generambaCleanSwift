@@ -10,17 +10,16 @@ import Dependencies
 import MBFoundation
 import MBStrings
 import MBUIKit
-import UIAppKit
 import UIKit
 
 final class {{ module_info.name }}VC: UIViewController, {{module_info.name}}View {
 
-  var interactor: {{module_info.name}}Interactor?
+  var interactor: {{module_info.name}}Interactor!
 
   override func viewDidLoad() {
     super.viewDidLoad()
     // TODO: make ui
-    interactor?.activate()
+    interactor.activate()
   }
 }
 
