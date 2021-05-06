@@ -14,7 +14,7 @@ public final class {{ module_info.name }}AssemblyImp: {{ module_info.name }}Asse
   public init() {}
 
   public func assembly() -> UIViewController {
-    let viewController = {{ module_info.name }}ViewImp()
+    let viewController = {{ module_info.name }}VC()
     let presenter = {{ module_info.name }}PresenterImp()
     let router = {{ module_info.name }}RouterImp()
     let interactor = {{ module_info.name }}InteractorImp()

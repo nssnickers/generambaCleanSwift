@@ -1,7 +1,7 @@
 # Template information section
 name: "cleanSwift"
 author: "Margarita Sukhova"
-version: "0.1.0"
+version: "0.2.0"
 
 # The declarations for code files
 
@@ -14,7 +14,7 @@ code_files:
 - {name: Assembly.swift, path: Module/assembly.swift.liquid}
 
 # ViewController
-- {name: ViewController.swift, path: Module/viewController.swift.liquid}
+- {name: VC.swift, path: Module/VC.swift.liquid}
 
 # Interactor
 - {name: Interactor.swift, path: Module/interactor.swift.liquid}

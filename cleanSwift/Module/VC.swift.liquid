@@ -10,12 +10,10 @@ import Dependencies
 import MBFoundation
 import MBStrings
 import MBUIKit
-import RxCocoa
-import RxSwift
 import UIAppKit
 import UIKit
 
-final class {{ module_info.name }}ViewImp: UIViewController, {{module_info.name}}View {
+final class {{ module_info.name }}VC: UIViewController, {{module_info.name}}View {
 
   var interactor: {{module_info.name}}Interactor?
 
@@ -28,7 +26,7 @@ final class {{ module_info.name }}ViewImp: UIViewController, {{module_info.name}
 
 // MARK: - Constants
 
-extension {{ module_info.name }}ViewImp {
+extension {{ module_info.name }}VC {
   private enum Constants: Namespace {
   }
 }
